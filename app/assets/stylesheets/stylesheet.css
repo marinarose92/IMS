@@ -1,0 +1,20 @@
+th {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+td {
+    padding-left:10px;
+    padding-right:10px;
+}
+table {
+    background-color:grey;
+}
+a.crud {
+    background-color:#59acfd;
+    color:white;
+    border-radius:10px;
+    padding:5px;
+    text-decoration:none;
+    margin-left:10px;
+    margin-right:10px;
+}

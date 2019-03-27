@@ -1,0 +1,2 @@
+<h1>Current Vendors</h1>
+<h4><%= Vendor.select(:vendor_name).map(&:vendor_name).uniq.join("") %></h4>

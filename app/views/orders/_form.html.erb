@@ -1,0 +1,21 @@
+<%= form_with(model: @order,  local: true) do |f| %>
+    <p>
+        <%= f.label :date, "Date: " %>
+        <%= f.text_field :date, 'data-behavior' => 'datepicker' %><br>
+        <%= f.label :library, "Library: " %>
+        <%= f.text_field :library %><br>
+        <%= f.label :product, "Product: " %>
+        <%= f.text_field :product %><br>
+        <%= f.label :price, "Price: " %>
+        <%= f.text_field :price %><br>
+        <%= f.label :serial_no, "Serial Number: " %>
+        <%= f.text_field :serial_no %><br>
+        <%= f.label :vendor, "Vendor: " %>
+        <%= f.text_field :vendor %><br>
+        <%= f.label :po_no, "Purchase Order Number: " %>
+        <%= f.text_field :po_no %>
+    </p>
+    <p>
+        <%= f.submit 'Submit' %>
+    </p>
+<% end %>
