@@ -1,8 +1,10 @@
 class OrdersController < ApplicationController
+  require 'date'
     #before_action :set_order, only: [:show, :edit, :update, :destroy]
 
     def index
       @orders = Order.all
+      @vendors = Vendor.all
     end
   
     def show
@@ -10,10 +12,12 @@ class OrdersController < ApplicationController
 
     def new
       @order = Order.new
+      @vendors = Vendor.all
     end
 
     def edit
       @order = Order.find(params[:id])
+      @vendors = Vendor.all
     end
     
     def create

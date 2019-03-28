@@ -1,7 +1,7 @@
 <%= form_with(model: @order,  local: true) do |f| %>
     <p>
         <%= f.label :date, "Date: " %>
-        <%= f.text_field :date, 'data-behavior' => 'datepicker' %><br>
+        <%= f.date_field :date %><br>
         <%= f.label :library, "Library: " %>
         <%= f.text_field :library %><br>
         <%= f.label :product, "Product: " %>
@@ -11,7 +11,7 @@
         <%= f.label :serial_no, "Serial Number: " %>
         <%= f.text_field :serial_no %><br>
         <%= f.label :vendor, "Vendor: " %>
-        <%= f.text_field :vendor %><br>
+        <%= f.select 'vendor', options_from_collection_for_select(@vendors, :vendor_name, :vendor_name) %><br>
         <%= f.label :po_no, "Purchase Order Number: " %>
         <%= f.text_field :po_no %>
     </p>
