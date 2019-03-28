@@ -1,0 +1,9 @@
+<%= form_with(model: @library,  local: true) do |f| %>
+    <p>
+        <%= f.label :library_name, "Library Name" %><br />
+        <%= f.text_field :library_name%>
+    </p>
+    <p>
+        <%= f.submit 'Submit' %>
+    </p>
+<% end %>

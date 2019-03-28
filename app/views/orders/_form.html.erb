@@ -3,7 +3,7 @@
         <%= f.label :date, "Date: " %>
         <%= f.date_field :date %><br>
         <%= f.label :library, "Library: " %>
-        <%= f.text_field :library %><br>
+        <%= f.select 'library', options_from_collection_for_select(@libraries, :library_name, :library_name) %><br>
         <%= f.label :product, "Product: " %>
         <%= f.text_field :product %><br>
         <%= f.label :price, "Price: " %>

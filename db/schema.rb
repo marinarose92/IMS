@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 20190326145200) do
 
   create_table "libraries", force: :cascade do |t|
-    t.string "name"
+    t.string "library_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 20190326145200) do
   end
 
   create_table "products", force: :cascade do |t|
-    t.string "name"
+    t.string "product_name"
     t.decimal "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

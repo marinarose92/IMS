@@ -5,6 +5,7 @@ class OrdersController < ApplicationController
     def index
       @orders = Order.all
       @vendors = Vendor.all
+      @libraries = Library.all
     end
   
     def show
@@ -13,11 +14,13 @@ class OrdersController < ApplicationController
     def new
       @order = Order.new
       @vendors = Vendor.all
+      @libraries = Library.all
     end
 
     def edit
       @order = Order.find(params[:id])
       @vendors = Vendor.all
+      @libraries = Library.all
     end
     
     def create

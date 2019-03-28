@@ -2,48 +2,48 @@ class LibrariesController < ApplicationController
           #before_action :set_library, only: [:show, :edit, :update, :destroy]
       
     def index
-    @libraries = library.all
+    @libraries = Library.all
     end
 
     def show
     end
 
     def new
-    @library = library.new
+        @library = Library.new
     end
 
     def edit
-    @library = library.find(params[:id])
+        @library = Library.find(params[:id])
     end
     
     def create
-    @library = library.new(library_params)
-    
-    @library.save
+        @library = Library.new(library_params)
+        
+        @library.save
 
-    if @library.save
-    redirect_to libraries_path, notice: "Successfully created"
-    else
-    render 'new'
-    end
-    end
+        if @library.save
+            redirect_to libraries_path, notice: "Successfully created"
+        else
+            render 'new'
+        end
+        end
 
     def update
-    @library = library.find(params[:id])
-    @library.update(library_params)
+        @library = Library.find(params[:id])
+        @library.update(library_params)
 
-    flash.notice = "library '#{@library.product}' updated!"
+        flash.notice = "library '#{@library.product}' updated!"
 
-    redirect_to libraries_path
+        redirect_to libraries_path
     end
 
     def destroy
-    @library = library.find(params[:id])
-    @library.destroy
+        @library = Library.find(params[:id])
+        @library.destroy
 
-    flash.notice = "Library '#{@library.product}' Deleted!"
-    
-    redirect_to librarys_path
+        flash.notice = "Library '#{@library.product}' Deleted!"
+        
+        redirect_to librarys_path
     end
 
     private
@@ -52,5 +52,4 @@ class LibrariesController < ApplicationController
     def library_params
         params.require(:library).permit(:library_name)
     end
-end
 end
