@@ -13,12 +13,13 @@
           <tr>
             <td><%= product.product_name %></td>
             <td><%= product.price %></td>
-            <td><%= link_to 'Edit', edit_product_path(product) %></td>
-            <td><%= link_to 'Destroy', product_path(product), method: :delete, data: { confirm: 'Are you sure?' }, class: 'crud' %></td>
+            <td><%= link_to 'Edit', edit_product_path(product), class: 'crud' %></td>
+            <td><%= link_to 'Delete', product_path(product), method: :delete, data: { confirm: 'Are you sure?' }, class: 'crud' %></td>
           <% end %>
           </tr>
       </tbody>
     </table>
-    <%= link_to 'New', new_product_path, class: 'crud' %>
+    <%= link_to '+ Add Product', new_product_path, class: 'new' %>
     <br>
+    <%= link_to 'Back to Orders', orders_path, class: 'button' %>
 </div></div>

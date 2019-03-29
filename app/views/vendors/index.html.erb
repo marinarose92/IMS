@@ -11,12 +11,13 @@
       <% @vendors.each do |vendor| %>
           <tr>
             <td><%= vendor.vendor_name %>
-            <td><%= link_to 'Edit', edit_vendor_path(vendor) %></td>
-            <td><%= link_to 'Destroy', vendor_path(vendor), method: :delete, data: { confirm: 'Are you sure?' }, class: 'crud' %></td>
+            <td><%= link_to 'Edit', edit_vendor_path(vendor), class: 'crud' %></td>
+            <td><%= link_to 'Delete', vendor_path(vendor), method: :delete, data: { confirm: 'Are you sure?' }, class: 'crud' %></td>
           <% end %>
           </tr>
       </tbody>
     </table>
-    <%= link_to 'New', new_vendor_path, class: 'crud' %>
+    <%= link_to '+ Add Vendor', new_vendor_path, class: 'new' %>
     <br>
+    <%= link_to 'Back to Orders', orders_path, class: 'button' %>
 </div></div>
