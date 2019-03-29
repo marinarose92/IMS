@@ -6,6 +6,7 @@ class OrdersController < ApplicationController
       @orders = Order.all
       @vendors = Vendor.all
       @libraries = Library.all
+      @products = Product.all
     end
   
     def show
@@ -15,12 +16,14 @@ class OrdersController < ApplicationController
       @order = Order.new
       @vendors = Vendor.all
       @libraries = Library.all
+      @products = Product.all
     end
 
     def edit
       @order = Order.find(params[:id])
       @vendors = Vendor.all
       @libraries = Library.all
+      @products = Product.all
     end
     
     def create

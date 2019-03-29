@@ -29,9 +29,9 @@
               <td><%= order.vendor %></td>
               <td><%= order.po_no %></td>
               <td><%= link_to 'Edit', edit_order_path(order), :class => 'crud' %></td>
-              <td><%= link_to 'Destroy', order_path(order), method: :delete, data: { confirm: 'Are you sure?' }, :class => 'crud' %>
+              <td><%= link_to 'Delete', order_path(order), method: :delete, data: { confirm: 'Are you sure?' }, :class => 'crud' %>
             </tr>
-          <% end %>
+            <% end %>
         </tbody>
       </table>
 

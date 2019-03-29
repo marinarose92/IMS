@@ -40,7 +40,7 @@ tr:nth-child(odd){
 }
 
 a.crud {
-    color:greenyellow;
+    color:black;
     border-radius:10px;
     padding:5px;
     text-decoration:none;

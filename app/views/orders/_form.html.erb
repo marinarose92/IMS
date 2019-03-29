@@ -5,15 +5,13 @@
         <%= f.label :library, "Library: " %>
         <%= f.select 'library', options_from_collection_for_select(@libraries, :library_name, :library_name) %><br>
         <%= f.label :product, "Product: " %>
-        <%= f.text_field :product %><br>
-        <%= f.label :price, "Price: " %>
-        <%= f.text_field :price %><br>
+        <%= f.select 'product', options_from_collection_for_select(@products, :product_name, :product_name) %><br>
         <%= f.label :serial_no, "Serial Number: " %>
-        <%= f.text_field :serial_no %><br>
+        <%= f.text_field :serial_no, :required => true %><br>
         <%= f.label :vendor, "Vendor: " %>
         <%= f.select 'vendor', options_from_collection_for_select(@vendors, :vendor_name, :vendor_name) %><br>
         <%= f.label :po_no, "Purchase Order Number: " %>
-        <%= f.text_field :po_no %>
+        <%= f.text_field :po_no, :required => true %>
     </p>
     <p>
         <%= f.submit 'Submit' %>
