@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IMS</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <div id="left-sidebar">
+<ul>
+<li><%= link_to 'Inventory', orders_path %></li>
+<hr class="sidebar">
+<li><%= link_to 'New Order', new_order_path %></li>
+<hr class="sidebar">
+<li><%= link_to 'Manage Products', products_path %></li>
+<hr class="sidebar">
+<li><%= link_to 'Manage Libraries', libraries_path %></li>
+<hr class="sidebar">
+<li><%= link_to 'Manage Vendors', vendors_path %></li>
+<hr class="sidebar">
+</ul>
+</div>
+    <%= yield %>
+  </body>
+</html>

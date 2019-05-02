@@ -1,11 +1,12 @@
+<div id="orders-container">
 <%= form_with(model: @product,  local: true) do |f| %>
     <p>
-        <%= f.label :product_name, "Product Name" %>
+        <%= f.label :product_name, "Product Name/Price" %>
+        <p><i>ex. Dell Optiplex 3010 - $567.87</i></p>
         <%= f.text_field :product_name%><br>
-        <%= f.label :product_price, "Product Price" %>
-        <%= f.text_field :price, :step => 0.5 %><br>
     </p>
     <p>
         <%= f.submit 'Submit' %>
     </p>
 <% end %>
+</div>

@@ -1,13 +1,18 @@
 class OrdersController < ApplicationController
+  layout 'orders'
   require 'date'
     #before_action :set_order, only: [:show, :edit, :update, :destroy]
 
+
     def index
-      @orders = Order.all
+      @orders = Order.all.search(params[:search])
+      @search = OrderSearch.new(params[:search])
+      @orders = @search.scope
       @vendors = Vendor.all
       @libraries = Library.all
       @products = Product.all
     end
+
   
     def show
     end
@@ -66,6 +71,6 @@ class OrdersController < ApplicationController
   
       # Never trust parameters from the scary internet, only allow the white list through.
       def order_params
-        params.require(:order).permit(:date, :library, :product, :price, :serial_no, :vendor, :po_no )
+        params.require(:order).permit(:date, :library, :product, :price, :serial_no, :vendor, :po_no, :term)
       end
   end

@@ -1,4 +1,5 @@
 class LibrariesController < ApplicationController
+    layout 'orders'
           #before_action :set_library, only: [:show, :edit, :update, :destroy]
       
     def index

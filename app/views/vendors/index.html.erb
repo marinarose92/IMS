@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
-<div id="container">
+<div id="orders-container">
   <div class="table">
-    <h1>Vendors</h1><table>
+    <h1>Vendors</h1><table>     <%= link_to '+ Add Vendor', new_vendor_path, class: 'new' %>
       <thead>
         <tr>
           <th>Name</th>
@@ -17,7 +17,4 @@
           </tr>
       </tbody>
     </table>
-    <%= link_to '+ Add Vendor', new_vendor_path, class: 'new' %>
-    <br>
-    <%= link_to 'Back to Orders', orders_path, class: 'button' %>
 </div></div>
