@@ -1,19 +1,21 @@
 <p id=”alert”><%= alert %></p>
-<div id="center-container">
-<div id="login-container">
-<h1 class="login">Login</h1>
+<div class="login-container">
+  <div class="login-grid">
+    <div class="login-logo"></div>
+    <div class="login-fields">
+<h1 class="login">Inventory Management System</h1>
 <%= form_tag sessions_path do |form| %>
   <div class="field">
-    <%= label_tag :email %>
     <%= text_field_tag :email %>
   </div>
   <div class="field">
-    <%= label_tag :password %>
     <%= password_field_tag :password %>
   </div>
   <div class="actions">
     <%= submit_tag :Login %>
   </div>
 <% end %>
+</div>
+</div>
 </div>
 </div>

@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css?family=Heebo');
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:200i,400');
+
+* {
+margin: 0;
+padding: 0;
+width:100%;
+}
+
+body {
+    overflow:hidden;
+    font-family:'Lato';
+}
+
+.field input {
+    border-bottom:1px solid rgb(194, 194, 194);
+    border-top:none;
+    border-left:none;
+    border-right:none;
+    width:45%;
+    height:45px;
+    font-size:25px;
+    font-family:inherit;
+    color:rgb(43, 43, 43);
+    border-radius:10px;
+    justify-items:center;
+    background:red;
+    display:block;
+    margin: 0 auto;
+    margin-top:25px;
+    padding:10px;
+}
+
+.actions input[type=submit]{
+    background-color: #243151;
+    border: none;
+    border-radius:10px;
+    width:300px;
+    color: white;
+    margin-top:10%;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16pt;
+    line-height:18pt;
+    font-family:inherit;
+    margin:0 auto;
+    display:block;
+    margin-top:25px;
+}
+
+.login {
+    text-align:center;
+    font-family:inherit;
+    font-size:25pt;
+    color:#ffffff;
+    padding-bottom:50px;
+    font-family:'Montserrat';
+    font-weight:1;
+}
+
+
+.login-grid{
+    display:grid;
+    grid-template-columns:1;
+    grid-template-rows:20% 80%;
+    background:#364974;
+    height:100%;
+    width:100%;
+    top:0;
+    left:0;
+    position:absolute;
+}
+
+div.login-logo {
+    content: url('http://i.imgur.com/bvJqZQn.png');
+    width:400px;
+    margin: 0 auto;
+    grid-row-start:1;
+    grid-row-end:2;
+    margin-top:5%;
+}
+
+.login-fields {
+    font-family:'Heebo', 'sans-serif';
+    margin:0 auto;
+    left:0;
+    right:0;
+    padding:25px;
+    height:50%;
+    width:100%;
+    grid-row-start:2;
+    grid-row-end:3;
+    margin-top:5%;
+}
