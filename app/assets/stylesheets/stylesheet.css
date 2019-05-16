@@ -20,12 +20,16 @@ h1 {
 }
 
 #orders-container {
-    overflow:hidden;
-    margin-left:200px;
+    margin-left:350px;
     width:100%;
     padding-right:10%;
     font-family:inherit;
-    overflow-x:auto;
+}
+
+#left-sidebar .closebtn {
+    position:absolute;
+    margin-left:230px;
+    font-size:56px;
 }
 
 #left-sidebar ul {
@@ -39,19 +43,19 @@ h1 {
 }
 
 hr.sidebar {
-    border:1px outset rgb(78, 78, 78);
+    border:1px outset #818181;
     width:auto;
 }
 
 #left-sidebar li, a {
-    font-family:'Lato';
+    font-family:'Montserrat';
     padding-bottom:10%;
     padding-top:10%;
-    text-align:center;
-    text-transform:uppercase;
     padding-right:10px;
     margin:0;
     text-decoration:none;
+    font-size:22px;
+    padding-left:5%;
 }
 
 #left-sidebar a {
@@ -59,7 +63,7 @@ hr.sidebar {
 }
 
 #left-sidebar {
-    background-color:rgb(27, 27, 27);
+    background-color:#4b4b4b;
     position:fixed;
     display:block;
     padding:0;
@@ -67,7 +71,16 @@ hr.sidebar {
     height:100%;
     top:0;
     left:0;
-    width:200px;
+    width:300px;
+    overflow-x:hidden;
+}
+.openbtn {
+    font-size:35px;
+    cursor:pointer;
+    background-color:transparent;
+    border:none;
+    width:55px;
+    display:block;
 }
 
 

@@ -5,11 +5,12 @@
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'sidebar', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
   <div id="left-sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 <ul>
 <li><%= link_to 'Inventory', orders_path %></li>
 <hr class="sidebar">
@@ -23,6 +24,8 @@
 <hr class="sidebar">
 </ul>
 </div>
+
+<button class="openbtn" onclick="openNav()">&#9776;</button>
     <%= yield %>
   </body>
 </html>
