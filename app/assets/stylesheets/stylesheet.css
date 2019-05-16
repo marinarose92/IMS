@@ -17,6 +17,8 @@ h1 {
     margin:none;
     line-height:24pt;
     padding-bottom:20px;
+    display:inline-block;
+    height:24px;
 }
 
 #orders-container {
@@ -185,28 +187,16 @@ tr {
     width:auto;
 }
 
-#date-filter input{
-    display:inline-block;
-    flex-direction:row;
+#search-svc {
+    height:100px;
+    width:400px;
+}
+
+#search-svc input input[type=submit] {
     height:20pt;
     padding:5px;
-}
-
-#date-to {
-    float:left;
-    width:48%;
-
-}
-
-#date-from {
-    float:right;
-    width:48%;
-
-}
-
-#date-filter input[type=submit] {
-margin-top:10px;
-margin-bottom:10px;
+    display:inline;
+    width:100px;
 }
 
 tr:nth-child(odd){
