@@ -26,7 +26,7 @@ body {
     width:100%;
     padding-right:10%;
     font-family:inherit;
-    padding-top:10%;
+    padding-top:5%;
 }
 
 #left-sidebar .closebtn {
@@ -254,7 +254,7 @@ table td {
     height:50px;
     width:200px;
     position:relative;
-    margin-top:100px;
+    margin-top:50px;
 }
 
 #search-svc input input[type=submit] {
