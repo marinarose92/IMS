@@ -186,6 +186,15 @@ td {
     font-family:inherit;
 }
 
+.table-grid-orders {
+    display:grid;
+    grid-template-columns:100px 100px 100px 100px 100px 100px 100px 100px;
+    grid-template-rows:auto;
+    font-family:'Montserrat';
+    font-size:15px;
+    margin-top:5%;
+}
+
 .table-grid {
     display:grid;
     grid-template-columns:150px 200px;
@@ -200,6 +209,16 @@ td {
     font-family: 'Montserrat';
     font-size:18px;
 }
+
+table {
+    white-space:nowrap;
+}
+
+table td {
+    font-size:14pt;
+    padding:25px;
+}
+
 
 .table-grid-products {
     display:grid;
@@ -232,10 +251,10 @@ td {
 }
 
 #search-svc {
-    height:100px;
+    height:50px;
     width:200px;
-    float:right;
-    padding-right:6%;
+    position:relative;
+    margin-top:100px;
 }
 
 #search-svc input input[type=submit] {
