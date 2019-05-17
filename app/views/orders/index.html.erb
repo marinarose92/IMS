@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 <div id="orders-container">
-  <div class="table">
    <h1 class="title">Orders</h1>
+   <%= link_to '+ Add Order', new_order_path, class: 'new' %><br><br><p>
    <div id="search-svc">
     <%= form_tag(orders_path, method: :get) do %>
     <%= text_field_tag :search, params[:search], placeholder: 'Search by Service Tag' %>

@@ -15,10 +15,8 @@ body {
 .title {
     padding:none;
     margin:none;
-    line-height:24pt;
-    padding-bottom:20px;
     display:inline;
-    height:24px;
+    font-size:30px;
 }
 
 #orders-container {
@@ -279,6 +277,10 @@ tr:nth-child(odd){
 
 .new {
     display:inline;
+    padding-left:30px;
+    height:30px;
+    position:relative;
+    top:-4px;
 }
 
 
