@@ -10,8 +10,6 @@
 <% end %>
 </div>
 
-<% if @orders.present? %>
-
       <table>
         <thead>
           <tr>
@@ -40,9 +38,5 @@
             <% end %>
         </tbody>
       </table>
-
-      <% else %>
-      <p class="no-results">There are no orders containing the service tag "<%= params[:search] %>".<br><br> Please click the back button or try another search.<br><br>
-         <% end %>
 
 <br>
