@@ -7,5 +7,5 @@ function openNav() {
   /* Set the width of the sidebar to 0 (hide it) */
   function closeNav() {
     document.getElementById("left-sidebar").style.width = "0";
-    document.getElementById("orders-container").style.marginLeft = "0";
+    document.getElementById("orders-container").style.marginLeft = "35px";
   }

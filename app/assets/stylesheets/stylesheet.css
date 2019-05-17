@@ -82,6 +82,9 @@ hr.sidebar {
     border:none;
     width:55px;
     display:block;
+    position:absolute;
+    left:0;
+    color:#4b4b4b;
 }
 
 .sidebar-logo {
