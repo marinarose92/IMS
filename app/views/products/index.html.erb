@@ -1,21 +1,10 @@
 <p id="notice"><%= notice %></p>
 <div id="orders-container">
-  <div class="table">
-    <h1>Products</h1><br>
-    <table><%= link_to '+ Add Product', new_product_path, class: 'new' %>
-      <thead>
-        <tr>
-          <th>Product/Price</th>
-        </tr>
-      </thead>
-      <tbody>
+    <h1 class="title">Products</h1>
+    <%= link_to '+ Add Product', new_product_path, class: 'new' %><br><br><p>
       <% @products.each do |product| %>
-          <tr>
-            <td><%= product.product_name %></td>
-            <td><%= link_to 'Edit', edit_product_path(product), class: 'crud' %></td>
-            <td><%= link_to 'Delete', product_path(product), method: :delete, data: { confirm: 'Are you sure?' }, class: 'crud' %></td>
+          <div class="table-grid-products">
+            <div class="row-name"><%= product.product_name %></div>
+            <div class="row-links"><%= link_to 'Edit', edit_product_path(product), class: 'crud' %><%= link_to 'Delete', product_path(product), method: :delete, data: { confirm: 'Are you sure?' }, class: 'crud' %></div>
           <% end %>
-          </tr>
-      </tbody>
-    </table>
 </div></div>

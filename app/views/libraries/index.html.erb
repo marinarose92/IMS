@@ -1,21 +1,10 @@
 <p id="notice"><%= notice %></p>
 <div id="orders-container">
-  <div class="table">
-    <h1>Libraries</h1><table>    <%= link_to '+ Add Library', new_library_path, class: 'new' %>
-      <thead>
-        <tr>
-          <th>Name</th>
-        </tr>
-      </thead>
-      <tbody>
+    <h1 class="title">Libraries</h1>
+    <%= link_to '+ Add Library', new_library_path, class: 'new' %><br><br><p>
       <% @libraries.each do |library| %>
-          <tr>
-            <td><%= library.library_name %>
-            <td><%= link_to 'Edit', edit_library_path(library), class: 'crud' %></td>
-            <td><%= link_to 'Delete', library_path(library), method: :delete, data: { confirm: 'Are you sure?' }, class: 'crud' %></td>
+        <div class="table-grid">
+            <div class="row-name"><%= library.library_name %></div>
+            <div class="row-links"><%= link_to 'Edit', edit_library_path(library), class: 'crud' %><%= link_to 'Delete', library_path(library), method: :delete, data: { confirm: 'Are you sure?' }, class: 'crud' %></div>
           <% end %>
-          </tr>
-      </tbody>
-    </table>
-  
 </div></div>
