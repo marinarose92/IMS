@@ -196,8 +196,9 @@ td {
 }
 
 .no-results {
-    position:relative;
-    top: -35px;
+    margin-top:5%;
+    font-family: 'Montserrat';
+    font-size:18px;
 }
 
 .table-grid-products {

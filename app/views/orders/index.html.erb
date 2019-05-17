@@ -7,21 +7,18 @@
     <%= form_tag(orders_path, method: :get) do %>
     <%= text_field_tag :search, params[:search], placeholder: 'Search by Service Tag' %>
     <%= submit_tag("Go", :style => "height:30px;width:40px;position:relative;top:-40px;left:210px;") %>
-  <% if @orders.present? %>
-  <%=render @orders %>
-  <% else %>
-<p class="no-results">There are no orders containing the term(s) <%= params[:search] %><br><br>
-   <% end %>
 <% end %>
 </div>
+
+<% if @orders.present? %>
 
       <table>
         <thead>
           <tr>
             <th>Date</th>
             <th>Library</th>
-            <th>Product/Price</th>
-            <th>Serial</th>
+            <th>Product</th>
+            <th>Svc Tag</th>
             <th>Vendor</th>
             <th>Purchase Order</th>
             <th colspan="7"></th>
@@ -43,5 +40,9 @@
             <% end %>
         </tbody>
       </table>
+
+      <% else %>
+      <p class="no-results">There are no orders containing the service tag "<%= params[:search] %>".<br><br> Please click the back button or try another search.<br><br>
+         <% end %>
 
 <br>
