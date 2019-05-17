@@ -12,12 +12,12 @@ body {
     font-family:'Lato';
 }
 
-h1 {
+.title {
     padding:none;
     margin:none;
     line-height:24pt;
     padding-bottom:20px;
-    display:inline-block;
+    display:inline;
     height:24px;
 }
 
@@ -189,14 +189,17 @@ tr {
 
 #search-svc {
     height:100px;
-    width:400px;
+    width:200px;
+    float:right;
+    padding-right:6%;
 }
 
 #search-svc input input[type=submit] {
     height:20pt;
     padding:5px;
     display:inline;
-    width:100px;
+    position:relative;
+    left:300px;
 }
 
 tr:nth-child(odd){

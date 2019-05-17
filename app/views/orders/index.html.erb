@@ -2,11 +2,11 @@
 
 <div id="orders-container">
   <div class="table">
-   <h1>Orders</h1>
+   <h1 class="title">Orders</h1>
    <div id="search-svc">
     <%= form_tag(orders_path, method: :get) do %>
     <%= text_field_tag :search, nil, placeholder: 'Search by Service Tag' %>
-    <%= submit_tag "Search" %>
+    <%= submit_tag("Go", :style => "height:30px;width:40px;position:relative;top:-40px;left:210px;") %>
   </p>
 <% end %>
 </div>
