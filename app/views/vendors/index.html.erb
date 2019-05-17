@@ -1,20 +1,10 @@
 <p id="notice"><%= notice %></p>
 <div id="orders-container">
-  <div class="table">
-    <h1>Vendors</h1><table>     <%= link_to '+ Add Vendor', new_vendor_path, class: 'new' %>
-      <thead>
-        <tr>
-          <th>Name</th>
-        </tr>
-      </thead>
-      <tbody>
+    <h1 class="title">Vendors</h1>
+      <%= link_to '+ Add Vendor', new_vendor_path, class: 'new' %><br><br><p>
       <% @vendors.each do |vendor| %>
-          <tr>
-            <td><%= vendor.vendor_name %>
-            <td><%= link_to 'Edit', edit_vendor_path(vendor), class: 'crud' %></td>
-            <td><%= link_to 'Delete', vendor_path(vendor), method: :delete, data: { confirm: 'Are you sure?' }, class: 'crud' %></td>
+      <div class="table-grid">
+      <div class="row-name"><%= vendor.vendor_name %></div>
+      <div class="row-links"><%= link_to 'Edit', edit_vendor_path(vendor), class: 'crud' %><%= link_to 'Delete', vendor_path(vendor), method: :delete, data: { confirm: 'Are you sure?' }, class: 'crud' %></div>
           <% end %>
-          </tr>
-      </tbody>
-    </table>
 </div></div>

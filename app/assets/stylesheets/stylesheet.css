@@ -26,6 +26,7 @@ body {
     width:100%;
     padding-right:10%;
     font-family:inherit;
+    padding-top:10%;
 }
 
 #left-sidebar .closebtn {
@@ -176,7 +177,6 @@ select {
 th {
     padding-left: 10px;
     padding-right: 10px;
-    width:100%;
 }
 
 td {
@@ -186,8 +186,34 @@ td {
     font-family:inherit;
 }
 
-tr {
-    width:auto;
+.table-grid {
+    display:grid;
+    grid-template-columns:100px 200px;
+    grid-template-rows:auto;
+    font-family:'Montserrat';
+    font-size:20px;
+    margin-top:5%;
+}
+
+.table-grid a {
+    font-size:15px;
+}
+
+.row-name {
+    padding-bottom:10px;
+    vertical-align:middle;
+    height:20px;
+}
+
+.row-links {
+    height:20px;
+    display:inline-block;
+    vertical-align:middle;
+    line-height:15px;
+}
+
+.crud {
+    display:inline;
 }
 
 #search-svc {
@@ -214,13 +240,13 @@ tr:nth-child(odd){
     font-family:'Lato';
     font-size:18px;
     color:#4b4b4b;
-    width:800px;
 
 }
 
-a:hover {
-    background:none;
+.new {
+    display:inline;
 }
+
 
 @media only screen and (min-width: 900px) {
     #orders-container { 
