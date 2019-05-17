@@ -5,9 +5,12 @@ class OrdersController < ApplicationController
 
 
     def index
-      @orders = Order.all.search(params[:search])
-      @search = OrderSearch.new(params[:search])
-      @orders = @search.scope
+      @orders = Order.all
+      if params[:search]
+        @orders = Order.search(params[:search]).order("created_at DESC")
+      else
+        @orders = Order.all.order('created_at DESC')
+      end
       @vendors = Vendor.all
       @libraries = Library.all
       @products = Product.all
@@ -71,6 +74,6 @@ class OrdersController < ApplicationController
   
       # Never trust parameters from the scary internet, only allow the white list through.
       def order_params
-        params.require(:order).permit(:date, :library, :product, :price, :serial_no, :vendor, :po_no, :term)
+        params.require(:order).permit(:date, :library, :product, :price, :serial_no, :vendor, :po_no, :search, :search)
       end
   end

@@ -195,6 +195,10 @@ td {
     margin-top:5%;
 }
 
+.no-results {
+    position:relative;
+    top: -35px;
+}
 
 .table-grid-products {
     display:grid;
