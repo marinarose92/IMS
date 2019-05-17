@@ -33,7 +33,7 @@ class LibrariesController < ApplicationController
         @library = Library.find(params[:id])
         @library.update(library_params)
 
-        flash.notice = "library '#{@library.product}' updated!"
+        flash.notice = "library '#{@library.library_name}' updated!"
 
         redirect_to libraries_path
     end
@@ -42,9 +42,9 @@ class LibrariesController < ApplicationController
         @library = Library.find(params[:id])
         @library.destroy
 
-        flash.notice = "Library '#{@library.product}' Deleted!"
+        flash.notice = "Library '#{@library.library_name}' Deleted!"
         
-        redirect_to librarys_path
+        redirect_to libraries_path
     end
 
     private
