@@ -9,7 +9,7 @@ class OrdersController < ApplicationController
       if params[:search]
         @orders = Order.search(params[:search]).order("created_at DESC")
       else
-        @orders = Order.all.order('created_at DESC')
+        @orders = Order.all.order('po_no ASC')
       end
       @vendors = Vendor.all
       @libraries = Library.all
