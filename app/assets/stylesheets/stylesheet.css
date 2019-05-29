@@ -192,6 +192,15 @@ td {
     margin-top:5%;
 }
 
+.table-grid-libs {
+    display:grid;
+    grid-template-columns:150px 150px 200px;
+    grid-template-rows:auto;
+    font-family:'Montserrat';
+    font-size:20px;
+    margin-top:5%;
+}
+
 .table-grid {
     display:grid;
     grid-template-columns:150px 200px;
