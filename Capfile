@@ -3,6 +3,7 @@ require 'capistrano/setup'
 require 'capistrano/deploy'
 
 require 'capistrano/rails'
+require 'capistrano/rails/migrations'
 require 'capistrano/bundler'
 require 'capistrano/rbenv'
 require 'capistrano/puma'
