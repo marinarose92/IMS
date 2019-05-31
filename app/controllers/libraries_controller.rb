@@ -33,7 +33,7 @@ class LibrariesController < ApplicationController
         @library = Library.find(params[:id])
         @library.update(library_params)
 
-        flash.notice = "library '#{@library.library_name}' updated!"
+        flash.notice = "library '#{@library.name}' updated!"
 
         redirect_to libraries_path
     end
@@ -42,7 +42,7 @@ class LibrariesController < ApplicationController
         @library = Library.find(params[:id])
         @library.destroy
 
-        flash.notice = "Library '#{@library.library_name}' Deleted!"
+        flash.notice = "Library '#{@library.name}' Deleted!"
         
         redirect_to libraries_path
     end
@@ -51,6 +51,6 @@ class LibrariesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def library_params
-        params.require(:library).permit(:library_name, :df_lic)
+        params.require(:library).permit(:name, :df_lic)
     end
 end

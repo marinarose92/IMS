@@ -2,8 +2,8 @@
 <h1>Create a New Library</h1><br><br>
 <%= form_with(model: @library,  local: true) do |f| %>
     <p>
-        <%= f.label :library_name, "Library Name" %><br />
-        <%= f.text_field :library_name%>
+        <%= f.label :name, "Library Name" %><br />
+        <%= f.text_field :name%>
         <%= f.label :df_lic, "Total Deep Freeze Licenses" %><br />
         <%= f.number_field :df_lic%>
     </p>
