@@ -2,9 +2,17 @@
 <div id="orders-container">
     <h1 class="title">Products</h1>
     <%= link_to '+ Add Product', new_product_path, class: 'new' %><br><br><p>
+    <div class="table-grid-prods">
+    <div class="row-name"><strong>Product Name</strong></div>
+    <div class="row-name"><strong>Product Price</strong></div>
+    <div class="row-name"><strong>Vendor</strong></div>
+    <div class="row-name"></div>
+    </div>
       <% @products.each do |product| %>
-          <div class="table-grid-products">
+          <div class="table-grid-prods">
             <div class="row-name"><%= product.product_name %></div>
+            <div class="row-name"><%= product.price %></div>
+            <div class="row-name"><%= product.vendor %></div>
             <div class="row-links"><%= link_to 'Edit', edit_product_path(product), class: 'crud' %><%= link_to 'Delete', product_path(product), method: :delete, data: { confirm: 'Are you sure?' }, class: 'crud' %></div>
           <% end %>
 </div></div>

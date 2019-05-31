@@ -8,6 +8,7 @@ class ProductsController < ApplicationController
  
    def new
      @product = Product.new
+     @vendors = Vendor.all
    end
    
    def create
@@ -24,6 +25,7 @@ class ProductsController < ApplicationController
  
    def edit
      @product = Product.find(params[:id])
+     @vendors = Vendor.all
    end
  
    def update
@@ -47,6 +49,6 @@ class ProductsController < ApplicationController
    private
  
    def product_params
-     params.require(:product).permit(:product_name, :price)
+     params.require(:product).permit(:product_name, :vendor, :price)
    end
 end

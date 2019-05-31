@@ -7,11 +7,9 @@
         <%= f.label :library, "Library: " %>
         <%= collection_select(:order, :library_id, Library.all, :id, :name, {}, { :multiple => false } ) %>
         <%= f.label :product, "Product: " %>
-        <%= f.select 'product', options_from_collection_for_select(@products, :product_name, :product_name) %><br>
+        <%= collection_select(:order, :product_id, Product.all, :id, :product_name, {}, { :multiple => false } ) %>
         <%= f.label :serial_no, "Serial Number: " %>
         <%= f.text_field :serial_no, :required => true %><br>
-        <%= f.label :vendor, "Vendor: " %>
-        <%= f.select 'vendor', options_from_collection_for_select(@vendors, :vendor_name, :vendor_name) %><br>
         <%= f.label :po_no, "Purchase Order Number: " %>
         <%= f.text_field :po_no, :required => true %>
     </p>

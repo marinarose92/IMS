@@ -1,6 +1,7 @@
 class Order < ApplicationRecord
   belongs_to :library
-  delegate :name, to: :library, prefix:true
+  belongs_to :product
+  delegate :name, :product_name, to: :library, prefix:true
     def self.search(search)
         if search.present?
           Order.where('serial_no LIKE?', "%#{search}%")
