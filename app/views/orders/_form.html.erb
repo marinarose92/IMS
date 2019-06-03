@@ -5,9 +5,9 @@
         <%= f.label :date, "Date: " %>
         <%= f.date_field :date %><br>
         <%= f.label :library, "Library: " %>
-        <%= collection_select(:order, :library_id, Library.all, :id, :name, {}, { :multiple => false } ) %>
+        <%= collection_select(:order, :library_id, Library.order('name ASC').all, :id, :name, {}, { :multiple => false } ) %>
         <%= f.label :product, "Product: " %>
-        <%= collection_select(:order, :product_id, Product.all, :id, :product_name, {}, { :multiple => false } ) %>
+        <%= collection_select(:order, :product_id, Product.order('product_name ASC').all, :id, :product_name, {}, { :multiple => false } ) %>
         <%= f.label :serial_no, "Serial Number: " %>
         <%= f.text_field :serial_no, :required => true %><br>
         <%= f.label :po_no, "Purchase Order Number: " %>

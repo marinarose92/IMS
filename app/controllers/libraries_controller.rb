@@ -3,7 +3,7 @@ class LibrariesController < ApplicationController
           #before_action :set_library, only: [:show, :edit, :update, :destroy]
       
     def index
-    @libraries = Library.all
+    @libraries = Library.all.order('name ASC')
     end
 
     def show

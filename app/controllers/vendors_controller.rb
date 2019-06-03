@@ -3,7 +3,7 @@ class VendorsController < ApplicationController
        # before_action :set_vendor, only: [:show, :edit, :update, :destroy]
 
   def index
-    @vendors = Vendor.all
+    @vendors = Vendor.all.order('vendor_name ASC')
   end
 
   def new
