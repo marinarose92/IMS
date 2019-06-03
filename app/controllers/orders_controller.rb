@@ -9,7 +9,7 @@ class OrdersController < ApplicationController
       if params[:search]
         @orders = Order.search(params[:search]).order("created_at DESC")
       else
-        @orders = Order.all.order('po_no ASC')
+        @orders = Order.all.order('po_no DESC')
       end
       @vendors = Vendor.all
       @libraries = Library.all
@@ -68,6 +68,6 @@ class OrdersController < ApplicationController
   
       # Never trust parameters from the scary internet, only allow the white list through.
       def order_params
-        params.require(:order).permit(:date, :library_id, :product_id, :price, :serial_no, :vendor, :po_no, :search, :search)
+        params.require(:order).permit(:date, :library_id, :product_name, :product_id, :price, :serial_no, :vendor, :po_no, :search, :search)
       end
   end

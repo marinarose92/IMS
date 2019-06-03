@@ -263,6 +263,7 @@ table td {
 
 .crud {
     display:inline;
+    font-size:12px;
 }
 
 #search-svc {
@@ -295,7 +296,7 @@ tr:nth-child(odd){
 .new {
     display:inline;
     padding-left:30px;
-    height:30px;
+    height:10px;
     position:relative;
     top:-4px;
 }
