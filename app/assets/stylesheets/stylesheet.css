@@ -17,7 +17,7 @@ body {
     padding:none;
     margin:none;
     display:inline;
-    font-size:30px;
+    font-size:25pt;
 }
 
 #orders-container {
@@ -39,20 +39,22 @@ body {
 
 #left-sidebar ul {
 	list-style-type:none;
-	background-color:#4b4b4b;
+    background-color:#4b4b4b;
+    text-align:right;
 }
 
 #left-sidebar a {
 	text-decoration:none;
 	font-family:'Montserrat';
 	font-size:22px;
-	color:rgb(197, 197, 197);
+    color:rgb(197, 197, 197);
+    padding-left:25px;
+    padding-right:25px;
 }
 
 #left-sidebar li {
 	display:inline;
-	line-height:100px;
-	padding-right:4%;
+    line-height:100px;
 }
 
 .sidebar-logo {
@@ -199,9 +201,14 @@ table {
     width:700px;
 }
 
+table tr {
+    font-size:18pt;
+    line-height:30pt;
+}
+
 table td {
-    font-size:12pt;
-    padding:15px;
+    font-size:16pt;
+    padding:20px;
 }
 
 
