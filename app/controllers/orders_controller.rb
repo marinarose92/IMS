@@ -36,10 +36,11 @@ class OrdersController < ApplicationController
     
     def create
       @order = Order.new(order_params)
+      @vendor = Vendor.all
     
       @order.save
   
-      if @order.save
+      if @order.save!
       redirect_to orders_path, notice: "Successfully created"
       else
       render 'new'
@@ -68,6 +69,6 @@ class OrdersController < ApplicationController
   
       # Never trust parameters from the scary internet, only allow the white list through.
       def order_params
-        params.require(:order).permit(:date, :library_id, :product_name, :product_id, :price, :serial_no, :vendor, :po_no, :search, :search)
+        params.require(:order).permit(:date, :library_id, :product_name, :product_id, :price, :serial_no, :vendor_id, :po_no, :search, :search)
       end
   end

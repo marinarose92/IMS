@@ -4,6 +4,7 @@ class ProductsController < ApplicationController
  
    def index
     @products = Product.all.order('product_name ASC')
+    @vendors = Vendor.all
    end
  
    def new
@@ -26,6 +27,7 @@ class ProductsController < ApplicationController
    def edit
      @product = Product.find(params[:id])
      @vendors = Vendor.all
+     @orders = Order.all
    end
  
    def update
@@ -49,6 +51,6 @@ class ProductsController < ApplicationController
    private
  
    def product_params
-     params.require(:product).permit(:product_name, :vendor, :price)
+     params.require(:product).permit(:product_name, :vendor_id, :price)
    end
 end

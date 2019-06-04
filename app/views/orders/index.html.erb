@@ -24,12 +24,12 @@
         <tbody>
           <% @orders.each do |order| %>
             <tr>
-              <td><%= order.date %></td>
+              <td width="200px"><%= order.date %></td>
               <td><%= order.library.try :name %></td>
               <td><%= order.product.try :product_name %></td>
               <td><%= order.serial_no %></td>
               <td><%= order.po_no %></td>
-              <td><%= link_to 'Edit', edit_order_path(order), :class => 'crud' %></td>
+              <td width="50px"><%= link_to 'Edit', edit_order_path(order), :class => 'crud' %></td>
               <td><%= link_to 'Delete', order_path(order), method: :delete, data: { confirm: 'Are you sure?' }, :class => 'crud' %>
             </tr>
             <% end %>

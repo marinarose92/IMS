@@ -12,7 +12,7 @@
     <div class="table-grid-prods">
       <div class="row-name"><%= product.product_name %></div>
       <div class="row-name"><%= product.price %></div>
-      <div class="row-name"><%= product.vendor %></div>
+      <div class="row-name"><%= product.vendor.try :vendor_name %></div>
       <div class="row-links"><%= link_to 'Edit', edit_product_path(product), class: 'crud' %><%= link_to 'Delete', product_path(product), method: :delete, data: { confirm: 'Are you sure?' }, class: 'crud' %></div>
     <% end %>
     </div>
