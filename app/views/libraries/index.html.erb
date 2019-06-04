@@ -2,16 +2,17 @@
 <div id="orders-container">
     <h1 class="title">Libraries</h1>
     <%= link_to '+ Add Library', new_library_path, class: 'new' %><br><br><p>
-     <div class="table-grid-libs">
-     <div class="row-name"><strong>Library Name</strong></div>
-     <div class="row-name"><strong>DF Licenses</strong></div>
-     <div class="row-name"></div>
+    <div class="table-grid-libs">
+        <div class="row-name"><strong>Library Name</strong></div>
+        <div class="row-name"><strong>DF Licenses</strong></div>
+        <div class="row-name"></div>
      </div>
     
     <% @libraries.each do |library| %>
-        <div class="table-grid-libs">
-            <div class="row-name"><%= library.name %></div>
-            <div class="row-name"><%= library.df_lic %></div>
-            <div class="row-links"><%= link_to 'Edit', edit_library_path(library), class: 'crud' %><%= link_to 'Delete', library_path(library), method: :delete, data: { confirm: 'Are you sure?' }, class: 'crud' %></div>
-          <% end %>
-</div></div>
+    <div class="table-grid-libs">
+        <div class="row-name"><%= library.name %></div>
+        <div class="row-name"><%= library.df_lic %></div>
+        <div class="row-links"><%= link_to 'Edit', edit_library_path(library), class: 'crud' %><%= link_to 'Delete', library_path(library), method: :delete, data: { confirm: 'Are you sure?' }, class: 'crud' %></div>
+        <% end %>
+    </div>
+</div>

@@ -22,7 +22,6 @@ body {
 
 #orders-container {
     margin-left:5%;
-    width:100%;
     padding-right:10%;
     font-family:inherit;
     padding-top:5%;
@@ -153,14 +152,7 @@ td {
     font-family:inherit;
 }
 
-.table-grid-orders {
-    display:grid;
-    grid-template-columns:100px 100px 100px 100px 100px 100px 100px 100px;
-    grid-template-rows:auto;
-    font-family:'Montserrat';
-    font-size:15px;
-    margin-top:5%;
-}
+/* tables */
 
 .table-grid-libs {
     display:grid;
@@ -173,7 +165,7 @@ td {
 
 .table-grid-prods {
     display:grid;
-    grid-template-columns:250px 200px 200px 50px;
+    grid-template-columns:220px 200px 100px 50px;
     grid-template-rows:auto;
     font-family:'Montserrat';
     font-size:20px;
@@ -200,8 +192,8 @@ table {
 }
 
 table td {
-    font-size:14pt;
-    padding:25px;
+    font-size:12pt;
+    padding:15px;
 }
 
 
@@ -231,9 +223,13 @@ table td {
     line-height:15px;
 }
 
+.row-links a {
+    padding-left:15px;
+}
+
 .crud {
     display:inline;
-    font-size:12px;
+    font-size:14px;
 }
 
 #search-svc {
@@ -258,7 +254,7 @@ tr:nth-child(odd){
 
 .table {
     font-family:'Lato';
-    font-size:18px;
+    font-size:14px;
     color:#4b4b4b;
 
 }
@@ -267,6 +263,7 @@ tr:nth-child(odd){
     display:inline;
     padding-left:30px;
     height:10px;
+    font-size:16px;
     position:relative;
     top:-4px;
 }
