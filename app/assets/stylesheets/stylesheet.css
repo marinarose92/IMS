@@ -9,6 +9,8 @@ width:100%;
 
 body {
     font-family:'Lato';
+    margin:0;
+    padding:0;
 }
 
 .title {
@@ -19,78 +21,46 @@ body {
 }
 
 #orders-container {
-    margin-left:350px;
+    margin-left:5%;
     width:100%;
     padding-right:10%;
     font-family:inherit;
     padding-top:5%;
 }
 
-#left-sidebar .closebtn {
-    position:absolute;
-    margin-left:230px;
-    font-size:56px;
+/* navigation */
+
+
+#left-sidebar {
 }
 
 #left-sidebar ul {
-    list-style-type:none;
-    color:rgb(197, 197, 197);
-    font-size:18px;
-    line-height:18px;
-    padding:0;
-
-}
-
-hr.sidebar {
-    border:1px outset #818181;
-    width:auto;
-}
-
-#left-sidebar li, a {
-    font-family:'Montserrat';
-    padding-bottom:10%;
-    padding-top:10%;
-    padding-right:10px;
-    margin:0;
-    text-decoration:none;
-    font-size:22px;
-    padding-left:5%;
+	list-style-type:none;
+	background-color:#4b4b4b;
 }
 
 #left-sidebar a {
-    color:rgb(197, 197, 197);
+	text-decoration:none;
+	font-family:'Montserrat';
+	font-size:22px;
+	color:rgb(197, 197, 197);
 }
 
-#left-sidebar {
-    background-color:#4b4b4b;
-    position:fixed;
-    display:block;
-    padding:0;
-    margin:0;
-    height:100%;
-    top:0;
-    left:0;
-    width:300px;
-    overflow-x:hidden;
-}
-.openbtn {
-    font-size:35px;
-    cursor:pointer;
-    background-color:transparent;
-    border:none;
-    width:55px;
-    display:block;
-    position:absolute;
-    left:0;
-    color:#4b4b4b;
+#left-sidebar li {
+	display:inline;
+	line-height:100px;
+	padding-right:4%;
 }
 
 .sidebar-logo {
     content: url('http://i.imgur.com/bvJqZQn.png');
     width:200px;
-    margin-top:8%;
     margin-left:25px;
+		display:inline;
+		float:left;
+		padding-right:70px;
 }
+
 
 
 #notice {
