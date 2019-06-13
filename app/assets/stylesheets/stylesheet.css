@@ -164,7 +164,7 @@ td {
 
 .table-grid-libs {
     display:grid;
-    grid-template-columns:150px 150px 200px;
+    grid-template-columns:auto 50px 200px;
     grid-template-rows:auto;
     font-family:'Montserrat';
     font-size:20px;

@@ -8,8 +8,8 @@
     <div class="row-name"><strong>Vendor</strong></div>
     <div class="row-name"></div>
   </div>
-    <% @products.each do |product| %>
     <div class="table-grid-prods">
+    <% @products.each do |product| %>
       <div class="row-name"><%= product.product_name %></div>
       <div class="row-name"><%= product.price %></div>
       <div class="row-name"><%= product.vendor.try :vendor_name %></div>
