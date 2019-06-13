@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   helper_method :current_user
-  before_action :require_login
+  before_filter :login_required, :except=>[:new, :create]
 
   def current_user
     if session[:user_id]
