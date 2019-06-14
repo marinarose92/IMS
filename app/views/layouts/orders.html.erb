@@ -6,7 +6,6 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'sidebar', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
@@ -17,6 +16,7 @@
 <li><%= link_to 'Products', products_path %></li>
 <li><%= link_to 'Libraries', libraries_path %></li>
 <li><%= link_to 'Vendors', vendors_path %></li>
+<li><%= link_to 'Sign Out', logout_path, method: :delete %></li>
 </ul>
 </div>
 

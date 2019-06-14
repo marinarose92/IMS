@@ -29,6 +29,8 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'bootstrap-datepicker-rails'
 gem 'devise'
+gem 'brakeman'
+gem 'pghero'
 
 
 # Use Capistrano for deployment

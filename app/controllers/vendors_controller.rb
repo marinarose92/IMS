@@ -1,5 +1,6 @@
 class VendorsController < ApplicationController
   layout 'orders'
+  before_action :require_login
        # before_action :set_vendor, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -49,4 +50,12 @@ class VendorsController < ApplicationController
   def vendor_params
     params.require(:vendor).permit(:vendor_name)
   end
+
+  def require_login
+    unless logged_in?
+      flash[:error] = "You must be logged in to access this section."
+      redirect_to login_path
+    end
+  end
 end
+

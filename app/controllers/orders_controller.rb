@@ -1,6 +1,7 @@
 class OrdersController < ApplicationController
   layout 'orders'
   require 'date'
+  before_action :require_login
     #before_action :set_order, only: [:show, :edit, :update, :destroy]
 
 
@@ -71,4 +72,11 @@ class OrdersController < ApplicationController
       def order_params
         params.require(:order).permit(:date, :library_id, :product_name, :product_id, :price, :serial_no, :vendor_id, :po_no, :search, :search)
       end
+  end
+
+    def require_login
+    unless logged_in?
+      flash[:error] = "You must be logged in to access this section."
+      redirect_to login_path
+    end
   end

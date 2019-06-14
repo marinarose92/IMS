@@ -1,5 +1,6 @@
 class ProductsController < ApplicationController
   layout 'orders'
+  before_action :require_login
         # before_action :set_product, only: [:show, :edit, :update, :destroy]
  
    def index
@@ -53,4 +54,11 @@ class ProductsController < ApplicationController
    def product_params
      params.require(:product).permit(:product_name, :vendor_id, :price)
    end
+
+   def require_login
+    unless logged_in?
+      flash[:error] = "You must be logged in to access this section."
+      redirect_to login_path
+    end
+  end
 end

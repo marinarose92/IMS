@@ -1,5 +1,6 @@
 class LibrariesController < ApplicationController
     layout 'orders'
+    before_action :require_login
           #before_action :set_library, only: [:show, :edit, :update, :destroy]
       
     def index
@@ -53,4 +54,12 @@ class LibrariesController < ApplicationController
     def library_params
         params.require(:library).permit(:name, :df_lic)
     end
+    
+    def require_login
+        unless logged_in?
+          flash[:error] = "You must be logged in to access this section."
+          redirect_to login_path
+        end
+      end
 end
+
