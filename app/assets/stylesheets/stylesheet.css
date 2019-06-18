@@ -29,6 +29,7 @@ body {
     display:block;
     position:relative;
     width:900px;
+    margin-bottom:5%;
 }
 
 /* navigation */
@@ -66,6 +67,15 @@ body {
 		padding-right:70px;
 }
 
+.signout a {
+    font-size:10px;
+}
+
+.sum {
+    border-top: 1px solid black;
+    padding-top:25px;
+    background-color:whitesmoke !important;
+}
 
 
 #notice {

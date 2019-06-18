@@ -14,5 +14,7 @@
             <div class="row-name"><%= library.df_lic %></div>
             <div class="row-links"><%= link_to 'Edit', edit_library_path(library), class: 'crud' %><%= link_to 'Delete', library_path(library), method: :delete, data: { confirm: 'Are you sure?' }, class: 'crud' %></div>
             <% end %>
+            <div class="sum">Total DF Licenses:</div>
+            <div class="sum"><%= Library.sum(:df_lic) %></div>
     </div>
 </div>
