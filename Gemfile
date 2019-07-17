@@ -31,6 +31,7 @@ gem 'bootstrap-datepicker-rails'
 gem 'devise'
 gem 'brakeman'
 gem 'pghero'
+gem 'capistrano-lets-encrypt'
 
 
 # Use Capistrano for deployment
@@ -45,7 +46,7 @@ group :development, :test do
   gem 'pg'
   gem 'capistrano',         require: false
   gem 'capistrano-rvm',     require: false
-  gem 'capistrano-rbenv',     require: false
+  gem 'capistrano-rbenv',   require: false
   gem 'capistrano-rails',   require: false
   gem 'capistrano-bundler', require: false
   gem 'capistrano3-puma',   require: false
